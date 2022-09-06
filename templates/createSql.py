@@ -4,6 +4,7 @@ import sys
 # command should be python3 or python createSql.py [username] [password]
 
 username = sys.argv[1]
+password = sys.argv[2]
 database = username + '_db'
 create = f"""CREATE DATABASE IF NOT EXISTS {database} DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 CREATE USER IF NOT EXISTS {username} IDENTIFIED BY {password};
