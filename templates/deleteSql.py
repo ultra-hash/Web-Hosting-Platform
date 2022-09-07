@@ -5,7 +5,7 @@ import sys
 
 username = sys.argv[1]
 database = username + '_db'
-delete=f"""DATABASE IF EXISTS {database};
+delete=f"""DROP DATABASE IF EXISTS {database};
 DROP USER IF EXISTS {username};
 FLUSH PRIVILEGES;
 exit"""
